@@ -1,0 +1,2 @@
+APP_MODULE=app.main:app
+APP_HOME=/opt/app-root/src
