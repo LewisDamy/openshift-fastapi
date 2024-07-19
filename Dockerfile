@@ -8,8 +8,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . /opt/app-root/src
 WORKDIR /opt/app-root/src
 
-# S2I scripts
-COPY .s2i/bin/ /usr/libexec/s2i
+# Copy S2I scripts
+COPY .s2i/environment /usr/libexec/s2i/environment
+COPY .s2i/bin/run /usr/libexec/s2i/run
 
 # Run the application
 CMD ["/usr/libexec/s2i/run"]
