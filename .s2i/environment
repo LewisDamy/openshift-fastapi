@@ -1,3 +1,1 @@
-APP_MODULE=app.main:app
-APP_HOME=/opt/app-root/src
-PORT=8080
+UPGRADE_PIP_LATEST=true
