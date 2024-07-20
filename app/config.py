@@ -7,7 +7,6 @@ load_dotenv()
 
 class Settings(BaseSettings):
     DATABASE_URL: str = os.getenv("DATABASE_URL")
-    print(f"database os env: {DATABASE_URL}")
 
 
 settings = Settings()

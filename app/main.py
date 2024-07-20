@@ -1,17 +1,20 @@
 from fastapi import FastAPI
-from app.routers import users
-from app.database import engine, Base
+from routers import users
+from database import engine, Base
 
 
 def create_app():
-    Base.metadata.create_all(bind=engine)
-
     app = FastAPI()
 
     app.include_router(users.router)
+
+    Base.metadata.create_all(bind=engine)
 
     return app
 
 
 if __name__ == "__main__":
+    import uvicorn
+
     app = create_app()
+    uvicorn.run(app, host="0.0.0.0", port=8000)
