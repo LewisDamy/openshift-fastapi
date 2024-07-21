@@ -4,11 +4,22 @@ from app.routers import users
 from app.database import engine, Base
 
 
+# app.include_router(users.router)
+
+# Base.metadata.create_all(bind=engine)\
+
+
 app = FastAPI()
 
-app.include_router(users.router)
 
-Base.metadata.create_all(bind=engine)
+@app.get("/")
+def index():
+    return {"data": "Hello FastAPI!"}
+
+
+@app.get("/message")
+def index():
+    return {"data": "FastAPI is great!"}
 
 
 if __name__ == "__main__":
