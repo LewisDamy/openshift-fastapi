@@ -1,7 +1,8 @@
 import uvicorn
 from fastapi import FastAPI
-from app.routers import users
-from app.database import engine, Base
+
+# from app.routers import users
+# from app.database import engine, Base
 
 
 # app.include_router(users.router)
