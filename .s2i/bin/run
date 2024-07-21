@@ -1,4 +1,4 @@
 #!/bin/bash
 
 # Entrypoint
-uvicorn app.main:create_app --factory --host 0.0.0.0 --port 8080 --workers 8 --header server:custom-server-name
+uvicorn main:create_app --factory --host 0.0.0.0 --port 8080 --workers 8 --header server:custom-server-name
